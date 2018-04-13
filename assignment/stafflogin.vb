@@ -36,7 +36,12 @@
 
         If dbuser Is Nothing Then
             MessageBox.Show("Wrong user name or password", "error", MessageBoxButtons.OK)
-        Else
+        End If
+
+        If dbuser.StaffPassword.Equals("passwordfOrchange") Then
+            firstlogin.Show()
+            Me.Close()
+        ElseIf dbuser.StaffType.Equals("ad") Then
             Form1.Show()
             Me.Close()
         End If
