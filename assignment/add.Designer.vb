@@ -40,7 +40,7 @@ Partial Class add
         '
         Me.GroupBox1.Controls.Add(Me.radfemale)
         Me.GroupBox1.Controls.Add(Me.radmale)
-        Me.GroupBox1.Location = New System.Drawing.Point(327, 46)
+        Me.GroupBox1.Location = New System.Drawing.Point(309, 43)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(124, 64)
         Me.GroupBox1.TabIndex = 1
@@ -71,7 +71,7 @@ Partial Class add
         '
         'btnconfirm
         '
-        Me.btnconfirm.Location = New System.Drawing.Point(168, 160)
+        Me.btnconfirm.Location = New System.Drawing.Point(150, 157)
         Me.btnconfirm.Name = "btnconfirm"
         Me.btnconfirm.Size = New System.Drawing.Size(75, 32)
         Me.btnconfirm.TabIndex = 2
@@ -80,7 +80,7 @@ Partial Class add
         '
         'btnreset
         '
-        Me.btnreset.Location = New System.Drawing.Point(267, 160)
+        Me.btnreset.Location = New System.Drawing.Point(249, 157)
         Me.btnreset.Name = "btnreset"
         Me.btnreset.Size = New System.Drawing.Size(75, 32)
         Me.btnreset.TabIndex = 3
@@ -90,7 +90,7 @@ Partial Class add
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(62, 49)
+        Me.Label1.Location = New System.Drawing.Point(44, 46)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(41, 13)
         Me.Label1.TabIndex = 4
@@ -99,7 +99,7 @@ Partial Class add
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(40, 75)
+        Me.Label2.Location = New System.Drawing.Point(22, 72)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 13)
         Me.Label2.TabIndex = 5
@@ -108,7 +108,7 @@ Partial Class add
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(44, 101)
+        Me.Label3.Location = New System.Drawing.Point(26, 98)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(59, 13)
         Me.Label3.TabIndex = 6
@@ -116,14 +116,14 @@ Partial Class add
         '
         'txtname
         '
-        Me.txtname.Location = New System.Drawing.Point(109, 46)
+        Me.txtname.Location = New System.Drawing.Point(91, 43)
         Me.txtname.Name = "txtname"
         Me.txtname.Size = New System.Drawing.Size(183, 20)
         Me.txtname.TabIndex = 7
         '
         'mskic
         '
-        Me.mskic.Location = New System.Drawing.Point(109, 72)
+        Me.mskic.Location = New System.Drawing.Point(91, 69)
         Me.mskic.Mask = "000000-00-0000"
         Me.mskic.Name = "mskic"
         Me.mskic.Size = New System.Drawing.Size(183, 20)
@@ -132,7 +132,7 @@ Partial Class add
         'txtpass
         '
         Me.txtpass.Enabled = False
-        Me.txtpass.Location = New System.Drawing.Point(109, 98)
+        Me.txtpass.Location = New System.Drawing.Point(91, 95)
         Me.txtpass.Name = "txtpass"
         Me.txtpass.Size = New System.Drawing.Size(183, 20)
         Me.txtpass.TabIndex = 9
@@ -145,7 +145,7 @@ Partial Class add
         Me.AutoScroll = True
         Me.AutoScrollMargin = New System.Drawing.Size(0, 20)
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(488, 230)
+        Me.ClientSize = New System.Drawing.Size(463, 218)
         Me.Controls.Add(Me.txtpass)
         Me.Controls.Add(Me.mskic)
         Me.Controls.Add(Me.txtname)

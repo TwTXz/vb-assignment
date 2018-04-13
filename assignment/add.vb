@@ -23,15 +23,26 @@ Public Class add
         Dim newid As String = code & num
 
         Try
-            Dim insert As New Staff With {.StaffID = newid}
+            Dim insert As New Staff With {.StaffID = newid, .StaffName = username,
+                                          .StaffICNo = ic,
+                                          .StaffPassword = password,
+                                          .StaffGender = gender}
             db.Staffs.InsertOnSubmit(insert)
             db.SubmitChanges()
         Catch ex As Exception
-            Console.Write(ex.ToString())
+            Console.Write(ex.Message.ToString())
         End Try
 
+    End Sub
 
-        Console.Write(newid)
+    Private Sub add_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtname.Focus()
+    End Sub
 
+    Private Sub btnreset_Click(sender As Object, e As EventArgs) Handles btnreset.Click
+        txtname.Text = ""
+        mskic.Text = ""
+        radmale.Checked = True
+        txtname.Focus()
     End Sub
 End Class
