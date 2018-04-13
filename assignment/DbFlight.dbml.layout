@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.625, 13.5" name="linq">
+  <DataContextMoniker Name="/DbFlightDataContext" />
+  <nestedChildShapes>
+    <classShape Id="50e7ac1a-b51a-4ac9-9f26-0e2b65df2eab" absoluteBounds="8, 10.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DbFlightDataContext/Cargo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28af8b71-df64-4ad1-81c7-4a52e9da339e" absoluteBounds="8.015, 11.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="49814120-b635-4c97-a74c-810342426256" absoluteBounds="0.5, 4.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DbFlightDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e7cd04c-072a-4318-9776-6f3a091e4a68" absoluteBounds="0.515, 5.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="76549489-0b77-43fa-ab97-1c9b1324c84e" absoluteBounds="7.5, 4.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DbFlightDataContext/Flight" />
+      <nestedChildShapes>
+        <elementListCompartment Id="156c590a-94b8-4930-a46e-248ea194ab95" absoluteBounds="7.5150000000000006, 5.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cba57da1-fe8c-4e2d-871c-e78c21183812" absoluteBounds="8.5, 8.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DbFlightDataContext/Flight_Cargo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4af700a6-3022-4bea-a76a-fa65e3e84bca" absoluteBounds="8.515, 8.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.25 : 10.875); (9.25 : 9.6362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DbFlightDataContext/Cargo/Cargo_Flight_Cargo" />
+      <nodes>
+        <classShapeMoniker Id="50e7ac1a-b51a-4ac9-9f26-0e2b65df2eab" />
+        <classShapeMoniker Id="cba57da1-fe8c-4e2d-871c-e78c21183812" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.33917148888358 : 6.97280110677083); (9.33917148888358 : 8.25)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DbFlightDataContext/Flight/Flight_Flight_Cargo" />
+      <nodes>
+        <classShapeMoniker Id="76549489-0b77-43fa-ab97-1c9b1324c84e" />
+        <classShapeMoniker Id="cba57da1-fe8c-4e2d-871c-e78c21183812" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c16171cf-9a91-4805-8df1-141792efe180" absoluteBounds="0.625, 2.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DbFlightDataContext/Luggage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef506eb9-2a14-44b9-8c3b-2e14dd5dc293" absoluteBounds="0.64000000000000012, 2.5850000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="152690b9-64b4-427a-8005-1c44e2d76978" absoluteBounds="4.375, 8.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DbFlightDataContext/Payment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c884805d-470a-4952-a6ac-cfb46fb0834e" absoluteBounds="4.39, 8.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 9.89589680989583); (5.375 : 12.0489005533854); (8 : 12.0489005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DbFlightDataContext/Payment/Payment_Cargo" />
+      <nodes>
+        <classShapeMoniker Id="152690b9-64b4-427a-8005-1c44e2d76978" />
+        <classShapeMoniker Id="50e7ac1a-b51a-4ac9-9f26-0e2b65df2eab" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0ebaf8cd-d293-4dbe-8608-6792a93df046" absoluteBounds="3.5, 5.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DbFlightDataContext/Reservation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e277775d-4d21-4004-8c4c-5547ae40a525" absoluteBounds="3.5149999999999997, 5.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.28125 : 5.125); (4.28125 : 2.28125); (2.625 : 2.28125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DbFlightDataContext/Reservation/Reservation_Luggage" />
+      <nodes>
+        <classShapeMoniker Id="0ebaf8cd-d293-4dbe-8608-6792a93df046" />
+        <classShapeMoniker Id="c16171cf-9a91-4805-8df1-141792efe180" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.9375 : 6.89589680989583); (4.9375 : 8.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DbFlightDataContext/Reservation/Reservation_Payment" />
+      <nodes>
+        <classShapeMoniker Id="0ebaf8cd-d293-4dbe-8608-6792a93df046" />
+        <classShapeMoniker Id="152690b9-64b4-427a-8005-1c44e2d76978" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 6.01044840494792); (3.5 : 6.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DbFlightDataContext/Customer/Customer_Reservation" />
+      <nodes>
+        <classShapeMoniker Id="49814120-b635-4c97-a74c-810342426256" />
+        <classShapeMoniker Id="0ebaf8cd-d293-4dbe-8608-6792a93df046" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 6.01044840494792); (5.5 : 6.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DbFlightDataContext/Flight/Flight_Reservation" />
+      <nodes>
+        <classShapeMoniker Id="76549489-0b77-43fa-ab97-1c9b1324c84e" />
+        <classShapeMoniker Id="0ebaf8cd-d293-4dbe-8608-6792a93df046" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f8baabe9-b5eb-488f-9ad3-7148b80bd8ea" absoluteBounds="5.125, 2.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DbFlightDataContext/Seat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d36bd8e-f3d9-4863-83ae-babeb68fb675" absoluteBounds="5.14, 2.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.3125 : 5.125); (5.3125 : 3.8862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DbFlightDataContext/Reservation/Reservation_Seat" />
+      <nodes>
+        <classShapeMoniker Id="0ebaf8cd-d293-4dbe-8608-6792a93df046" />
+        <classShapeMoniker Id="f8baabe9-b5eb-488f-9ad3-7148b80bd8ea" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="73ec9f4f-19c7-4f49-897f-48990c4f6ad8" absoluteBounds="10.375, 2.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DbFlightDataContext/Staff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b10b906-12b1-4fcf-9caf-fbf31ac2759f" absoluteBounds="10.39, 2.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.375 : 3.3749995); (8.5 : 3.3749995); (8.5 : 4.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DbFlightDataContext/Staff/Staff_Flight" />
+      <nodes>
+        <classShapeMoniker Id="73ec9f4f-19c7-4f49-897f-48990c4f6ad8" />
+        <classShapeMoniker Id="76549489-0b77-43fa-ab97-1c9b1324c84e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
