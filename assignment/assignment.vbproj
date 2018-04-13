@@ -129,7 +129,6 @@
     <Compile Include="report.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="staff.vb" />
     <Compile Include="stafflogin.Designer.vb">
       <DependentUpon>stafflogin.vb</DependentUpon>
     </Compile>
