@@ -33,6 +33,10 @@ Partial Class add
         Me.txtname = New System.Windows.Forms.TextBox()
         Me.mskic = New System.Windows.Forms.MaskedTextBox()
         Me.txtpass = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cbtype = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblid = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -138,6 +142,42 @@ Partial Class add
         Me.txtpass.TabIndex = 9
         Me.txtpass.Text = "passwordfOrchange"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(48, 126)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(37, 13)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "Type :"
+        '
+        'cbtype
+        '
+        Me.cbtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbtype.FormattingEnabled = True
+        Me.cbtype.Items.AddRange(New Object() {"Administative", "Staff"})
+        Me.cbtype.Location = New System.Drawing.Point(91, 123)
+        Me.cbtype.Name = "cbtype"
+        Me.cbtype.Size = New System.Drawing.Size(183, 21)
+        Me.cbtype.TabIndex = 11
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(61, 21)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(24, 13)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "ID :"
+        '
+        'lblid
+        '
+        Me.lblid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblid.Location = New System.Drawing.Point(91, 20)
+        Me.lblid.Name = "lblid"
+        Me.lblid.Size = New System.Drawing.Size(183, 19)
+        Me.lblid.TabIndex = 13
+        '
         'add
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -146,6 +186,10 @@ Partial Class add
         Me.AutoScrollMargin = New System.Drawing.Size(0, 20)
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(463, 218)
+        Me.Controls.Add(Me.lblid)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.cbtype)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtpass)
         Me.Controls.Add(Me.mskic)
         Me.Controls.Add(Me.txtname)
@@ -175,4 +219,8 @@ Partial Class add
     Friend WithEvents txtname As TextBox
     Friend WithEvents mskic As MaskedTextBox
     Friend WithEvents txtpass As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents cbtype As ComboBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents lblid As Label
 End Class

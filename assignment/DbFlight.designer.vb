@@ -2018,6 +2018,8 @@ Partial Public Class Staff
 	
 	Private _Answer As String
 	
+	Private _status As String
+	
 	Private _Flights As EntitySet(Of Flight)
 	
     #Region "Extensibility Method Definitions"
@@ -2067,6 +2069,10 @@ Partial Public Class Staff
     End Sub
     Partial Private Sub OnAnswerChanged()
     End Sub
+    Partial Private Sub OnstatusChanging(value As String)
+    End Sub
+    Partial Private Sub OnstatusChanged()
+    End Sub
     #End Region
 	
 	Public Sub New()
@@ -2091,7 +2097,7 @@ Partial Public Class Staff
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffName", DbType:="VarChar(50) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffName", DbType:="VarChar(50)")>  _
 	Public Property StaffName() As String
 		Get
 			Return Me._StaffName
@@ -2107,7 +2113,7 @@ Partial Public Class Staff
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffGender", DbType:="VarChar(6) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffGender", DbType:="VarChar(6)")>  _
 	Public Property StaffGender() As String
 		Get
 			Return Me._StaffGender
@@ -2123,7 +2129,7 @@ Partial Public Class Staff
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffICNo", DbType:="VarChar(14) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffICNo", DbType:="VarChar(14)")>  _
 	Public Property StaffICNo() As String
 		Get
 			Return Me._StaffICNo
@@ -2139,7 +2145,7 @@ Partial Public Class Staff
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffPhoneNo", DbType:="VarChar(12) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffPhoneNo", DbType:="VarChar(12)")>  _
 	Public Property StaffPhoneNo() As String
 		Get
 			Return Me._StaffPhoneNo
@@ -2155,7 +2161,7 @@ Partial Public Class Staff
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffAddress", DbType:="VarChar(100) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffAddress", DbType:="VarChar(100)")>  _
 	Public Property StaffAddress() As String
 		Get
 			Return Me._StaffAddress
@@ -2171,7 +2177,7 @@ Partial Public Class Staff
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffType", DbType:="VarChar(20) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffType", DbType:="VarChar(20)")>  _
 	Public Property StaffType() As String
 		Get
 			Return Me._StaffType
@@ -2187,7 +2193,7 @@ Partial Public Class Staff
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffPassword", DbType:="VarChar(10) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_StaffPassword", DbType:="VarChar(20)")>  _
 	Public Property StaffPassword() As String
 		Get
 			Return Me._StaffPassword
@@ -2203,7 +2209,7 @@ Partial Public Class Staff
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Question", DbType:="VarChar(100) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Question", DbType:="VarChar(100)")>  _
 	Public Property Question() As String
 		Get
 			Return Me._Question
@@ -2219,7 +2225,7 @@ Partial Public Class Staff
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Answer", DbType:="VarChar(30) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Answer", DbType:="VarChar(30)")>  _
 	Public Property Answer() As String
 		Get
 			Return Me._Answer
@@ -2231,6 +2237,22 @@ Partial Public Class Staff
 				Me._Answer = value
 				Me.SendPropertyChanged("Answer")
 				Me.OnAnswerChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_status", DbType:="VarChar(20)")>  _
+	Public Property status() As String
+		Get
+			Return Me._status
+		End Get
+		Set
+			If (String.Equals(Me._status, value) = false) Then
+				Me.OnstatusChanging(value)
+				Me.SendPropertyChanging
+				Me._status = value
+				Me.SendPropertyChanged("status")
+				Me.OnstatusChanged
 			End If
 		End Set
 	End Property

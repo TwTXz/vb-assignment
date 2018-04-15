@@ -98,15 +98,16 @@
   <Table Name="dbo.Staff" Member="Staffs">
     <Type Name="Staff">
       <Column Name="StaffID" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="StaffName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="StaffGender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
-      <Column Name="StaffICNo" Type="System.String" DbType="VarChar(14) NOT NULL" CanBeNull="false" />
-      <Column Name="StaffPhoneNo" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
-      <Column Name="StaffAddress" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="StaffType" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="StaffPassword" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="Question" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="Answer" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="StaffName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StaffGender" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="StaffICNo" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="StaffPhoneNo" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="StaffAddress" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="StaffType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="StaffPassword" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Question" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Answer" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Association Name="Staff_Flight" Member="Flights" ThisKey="StaffID" OtherKey="StaffID" Type="Flight" />
     </Type>
   </Table>

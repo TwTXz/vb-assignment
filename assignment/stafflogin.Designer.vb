@@ -77,6 +77,7 @@ Partial Class stafflogin
         '
         'btncancel
         '
+        Me.btncancel.CausesValidation = False
         Me.btncancel.Location = New System.Drawing.Point(87, 146)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.Size = New System.Drawing.Size(75, 23)
